@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fintrack
+    username: fintrack
+    password: fintrack
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+        
+app:
+  jwt:
+    secret: "CHANGE_ME_TO_A_LONG_RANDOM_SECRET_AT_LEAST_64_CHARS________________________________"
+    expirationMinutes: 120
+

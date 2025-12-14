@@ -1,0 +1,10 @@
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: fintrack
+      POSTGRES_USER: fintrack
+      POSTGRES_PASSWORD: fintrack
+    ports:
+      - "5432:5432"
